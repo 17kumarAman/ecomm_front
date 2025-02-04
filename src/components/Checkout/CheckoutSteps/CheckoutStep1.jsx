@@ -13,6 +13,7 @@ export const CheckoutStep1 = ({ onNext }) => {
     address: "",
     pincode: "",
     city: "",
+    state:"",
     country: "",
   });
 
@@ -173,6 +174,17 @@ export const CheckoutStep1 = ({ onNext }) => {
             </select>
 
             <div className="box-field__row">
+            <div className="box-field">
+                <input
+                required
+                  onChange={handleAddressChange}
+                  name="state"
+                  value={addressDetail.state}
+                  type="text"
+                  className="form-control"
+                  placeholder="Enter the state"
+                />
+              </div>
               <div className="box-field">
                 <input
                 required

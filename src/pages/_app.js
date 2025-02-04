@@ -79,6 +79,10 @@ else{
 }
 
 }
+const clearCart = () => {
+  setCart([]); // This will remove all items from the cart
+};
+
 
 useEffect(()=>{
   if(localStorage.getItem("ecomm_userToken")){
@@ -98,7 +102,7 @@ useEffect(()=>{
   return (
     <>
    
-    <CartContext.Provider value={{ cart, setCart, token , userDetails , setToken , setUserDetails , wishlist , fetchAllCartItem , fetchAllWishlistItem }}>
+    <CartContext.Provider value={{ cart,clearCart, setCart, token , userDetails , setToken , setUserDetails , wishlist , fetchAllCartItem , fetchAllWishlistItem }}>
       <Component {...pageProps} />
     </CartContext.Provider>
    
